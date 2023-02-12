@@ -5,7 +5,7 @@ Convert HTML into Markdown with Java.
 Gradle:
 ```gradle
 dependencies {
-    compile 'io.github.furstenheim:copy_down:1.0'
+    compile 'io.github.furstenheim:copy_down:1.1'
 }
 ```
 
@@ -15,10 +15,22 @@ Maven:
     <dependency>
         <groupId>io.github.furstenheim</groupId>
         <artifactId>copy_down</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </dependency>
 </dependencies>
 ```
+
+### JSoup Compatibility
+
+This library has a strong reliance on JSoup. Using a different version of it will lead to unexpected behaviours. Sadly, Java does not allow several versions of a library (unlike Node.js) so if your project is already using JSoup that version will have priority. 
+
+Supported versions are:
+
+| This Library | Jsoup |
+| ------------| --------| 
+| 1.0  | 1.13 |
+| 1.1 | 1.15 |
+
 
 ### Usage
 
@@ -77,4 +89,3 @@ public class Main {
 ### Acknowledgment
 This library is a port to Java of the wonderful library [Turndown.js](https://github.com/domchristie/turndown). This library passes the same test suite as the original library to ensure same behavior.
 
-This project is supported by Intellij open source license
